@@ -1,0 +1,12 @@
+body {
+    margin-top: 10px;
+}
+
+.full {
+    background: url('../images/thumb-1920-26551.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.top-buffer { 
+	margin-top: 10px; 
+}

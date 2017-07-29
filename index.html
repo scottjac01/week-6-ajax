@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Comedians</title>
+
+    <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--- CSS file  -->
+  <link rel="stylesheet" type="text/css" href="asset/css/style.css">
+ </head>
+
+<body class="full">
+	<div class="container-fluid">
+		<div class="row top-buffer">
+			<div class="col-md-12" id="render-buttons">
+				
+			</div>
+		</div>
+
+		<!-- Next Row  offset from the other column -->
+			<div class="row top-buffer">
+				<div class="col-md-4" id="displayGiphy" style="float left"></div>
+				  <div class="col-md-5 col-md-offset-3">
+						<form class="form-inline">
+						  <div class="form-group">
+						  <!-- changed to for="giphy-input" -->
+						    <label for="giphy-input">Pick a Comedian or Funny Character</label>
+								<!-- add id for capturing typed in value --> 
+						    <input type="text" class="form-control" id="giphy-input" placeholder="Blues Brothers">
+						  </div>
+
+						  <!-- button trigger new comedian or funny character to be added  -->
+						  <button id="add-giphy" type="submit" class="btn btn-default">Submit</button>
+						</form>
+				  </div>
+			</div>
+	</div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Added link to the Javascript Library -->
+  <script src= "asset/javascript/ajax.js"></script>
+</body>
+</html>
