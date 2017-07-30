@@ -6,6 +6,9 @@ body {
     background: url('../images/thumb-1920-26551.jpg') no-repeat center center fixed;
     background-size: cover;
 }
+.bg-color{
+	background-color: #CCD1D1;
+}
 
 .top-buffer { 
 	margin-top: 10px; 
