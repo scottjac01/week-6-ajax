@@ -29,7 +29,7 @@ function displayGiphy(){
 
     // Constructing a queryURL
     var apiKey = "&api_key=6bfadf40c3ae4da9a321316fa322af92&limit=10";
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
       btnValue + apiKey;
 
   // Performing an AJAX request with the queryURL
