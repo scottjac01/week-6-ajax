@@ -66,7 +66,7 @@ function displayGiphy(){
           giphyImage.attr("src", results[i].images.fixed_height_still.url);
           giphyImage.attr("data-state", "still");
           giphyImage.attr("data-animate", results[i].images.fixed_height.url);
-          giphyImage.attr("data-still", results[i].images.fixed_height.url);
+          giphyImage.attr("data-still", results[i].images.fixed_height_still.url);
 
           //append the paragraph and img to the giphyDiv
           giphyDiv.append(giphyImage);
@@ -75,6 +75,22 @@ function displayGiphy(){
           // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
           $("#displayGiphy").prepend(giphyDiv);
         }
+			 //animate the giphy by changing the state
+				$(".doit").on("click", function() {
+			      var state = $(this).attr("data-state");
+
+				      if(state === "still"){
+				        var animate1 = $(this).attr("data-animate");
+				        $(this).attr("src", animate1);
+				        $(this).attr("data-state", "animate");
+				      }
+				      else{
+				        var still1 = $(this).attr("data-still");
+				        $(this).attr("src", still1);
+				        $(this).attr("data-state", "still");
+
+      				}
+   		 		});
       });
     }
 
@@ -122,19 +138,3 @@ $("#add-giphy").on("click", function(event) {
 	$(document).on("click", ".comedy-btn", displayGiphy);
 	renderButtons();
 
-	//animate the giphy by changing the 
-	$(".doit").on("click", function() {
-      var state = $(this).attr("data-state");
-
-	      if(state === "still"){
-	        var animate1 = $(this).attr("data-animate");
-	        $(this).attr("src", animate1);
-	        $(this).attr("date-state", "animate");
-	      }
-	      else{
-	        var still1 = $(this).attr("data-still");
-	        $(this).attr("src", still1);
-	        $(this).attr("date-state", "still");
-
-      	}
-    });
